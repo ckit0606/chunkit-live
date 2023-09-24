@@ -205,11 +205,12 @@ def postJob():
         jobDescription = request.form.get('jobDescription')
         jobNature = request.form.get('jobNature')
         jobSalary = request.form.get('jobSalary')
+        jobStatus = 'Pending'
 
         # Insert data into the job table
         cursor = db_conn.cursor()
-        insert_sql = "INSERT INTO jobs (CompanyID, jobTitle, jobDescription, jobNature, jobSalary) VALUES (%s, %s, %s, %s, %s)"
-        cursor.execute(insert_sql, (CompanyID, jobTitle, jobDescription, jobNature, jobSalary))
+        insert_sql = "INSERT INTO jobs (CompanyID, jobTitle, jobDescription, jobNature, jobSalary,jobStatus) VALUES (%s, %s, %s, %s, %s,%s)"
+        cursor.execute(insert_sql, (CompanyID, jobTitle, jobDescription, jobNature, jobSalary,jobStatus))
         db_conn.commit()
         cursor.close()
 
