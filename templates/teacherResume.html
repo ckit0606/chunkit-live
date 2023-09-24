@@ -46,7 +46,7 @@ Resume
                                 <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
                                     <div class="d-flex mb-3">
                                         {% if Student[2] == 'Pending' %}
-                                        <a class="btn btn-light btn-square me-3" href="{{ student[1] }}"><i class="far fa-file text-primary"></i></a>
+                                        <a class="btn btn-light btn-square me-3" href="{{ Student[1] }}"><i class="far fa-file text-primary"></i></a>
                                         <form method="POST" action="{{ url_for('teacherResume', type='Pending') }}">
                                             <input type="hidden" name="studentID" value="{{ Student[0] }}">
                                             <input type="hidden" name="action" value="Accepted">  <!-- Change to 'Rejected' as needed -->
