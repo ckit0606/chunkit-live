@@ -78,7 +78,7 @@ def edit():
                 pdf_file_name_in_s3)
 
         cursor = db_conn.cursor()
-        update_sql = 'UPDATE student SET StudentName = %s, StudentGender = %s, StudentProgramme = %s, StudentState = %s,StudentPhoneNumber = %s,StudentYear = %s,StudentMethod = %s,StudentResume = %s,StudentReport = %s WHERE StudentID = 1'
+        update_sql = 'UPDATE student SET StudentName = %s, StudentGender = %s, StudentProgramme = %s, StudentState = %s,StudentPhoneNumber = %s,StudentYear = %s,StudentMethod = %s,ResumeLink = %s,ReportLink = %s WHERE StudentID = 1'
         cursor.execute(update_sql, (studentName,gender,programme,state,contact,studyYear,method,resume_url,report_url))
         db_conn.commit()
         cursor.close()
