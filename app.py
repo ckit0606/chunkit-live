@@ -333,7 +333,7 @@ def teacherResume(type=None):
 
         # Update the StudentApplyStatus based on the action
         cursor = db_conn.cursor()
-        update_sql = "UPDATE Student SET ResumeStatus = %s WHERE studentID = %s"
+        update_sql = "UPDATE student SET ResumeStatus = %s WHERE StudentID = %s"
         cursor.execute(update_sql, (action, studentID))
         db_conn.commit()
         cursor.close()
