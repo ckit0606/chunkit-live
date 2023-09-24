@@ -340,7 +340,7 @@ def teacherResume(type=None):
 
     # Fetch student data from the database where StudentApplyStatus is 'Pending'
     cursor = db_conn.cursor()
-    select_sql = f"SELECT StudentID, ResumeLink, ResumeStatus, StudentName, StudentProgramme, StudentYear, StudyMethod FROM Student WHERE ResumeStatus = '{type}' AND ResumeLink IS NOT NULL"
+    select_sql = f"SELECT StudentID, ResumeLink, ResumeStatus, StudentName, StudentProgramme, StudentYear, StudyMethod FROM student WHERE ResumeStatus = '{type}' AND ResumeLink IS NOT NULL"
     cursor.execute(select_sql)
     studentdata = cursor.fetchall()
     cursor.close()
