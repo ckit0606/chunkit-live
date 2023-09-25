@@ -12,7 +12,7 @@ bucket = "chunkit-s3-bucket"
 region = "us-east-1"
 
 db_conn = connections.Connection(
-    host='database-2.cjdu7tfbjxtq.us-east-1.rds.amazonaws.com',
+    host='database-3.cjdu7tfbjxtq.us-east-1.rds.amazonaws.com',
     port=3306,
     user='aws_user',
     password='Bait3273',
